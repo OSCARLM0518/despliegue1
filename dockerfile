@@ -11,7 +11,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Configura Apache para servir la carpeta "public" como la raíz del servidor
-RUN echo "DocumentRoot /var/www/html/public" > /etc/apache2/sites-available/000-default.conf
+RUN echo "DocumentRoot /var/www/html/" > /etc/apache2/sites-available/000-default.conf
 
 # Establece permisos para evitar problemas de acceso
 RUN chown -R www-data:www-data /var/www/html
